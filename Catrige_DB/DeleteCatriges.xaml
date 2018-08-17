@@ -1,0 +1,64 @@
+﻿<Page x:Class="Catrige_DB.DeleteCatriges"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="DeleteCatriges" Height="567" Width="742">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBox Name="TbSeal" Height="20" Width="70" TabIndex="3" Margin="86,0,0,10" HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom" TextWrapping="Wrap" />
+        <Label Grid.Column="0" x:Name="LbErrorMessage" Content="Введите номер пломбы!!" Visibility="Hidden"
+               Foreground="Red"
+               HorizontalAlignment="Left" Margin="584,568,0,0" VerticalAlignment="Top" Height="23" />
+        <Label Grid.Column="0" x:Name="LbPlombNumber" Content="№ пломбы" HorizontalAlignment="Left" Margin="10,537,0,0"
+               VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" />
+        <Button Grid.Column="0" x:Name="ButtonDelete" Content="Удалить" HorizontalAlignment="Left" Margin="161,537,0,0"
+                VerticalAlignment="Top" Width="75" Click="BtDelete_Click" />
+        <DataGrid x:Name="DgCatriges" HorizontalAlignment="Left" Height="532" VerticalAlignment="Top" Width="742"
+                  AutoGenerateColumns="False" CanUserResizeRows="False"
+                  Grid.ColumnSpan="3" Grid.Column="0" SelectionMode="Single">
+            <!--Columns in the Data Grid-->
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Seal}"
+                                    Header="Пломба"
+                                    Width="54"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Model}"
+                                    Header="Модель"
+                                    Width="100"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Organization}"
+                                    Header="Организация"
+                                    Width="83"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding DataIn}"
+                                    Header="Дата приёма"
+                                    Width="85"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding DataOut}"
+                                    Header="Дата выдачи"
+                                    Width="85"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Owner}"
+                                    Header="Кто принёс"
+                                    Width="85"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Repair}"
+                                    Header="Ремонт"
+                                    Width="85"
+                                    IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Status}"
+                                    Header="Статус"
+                                    Width="85"
+                                    IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

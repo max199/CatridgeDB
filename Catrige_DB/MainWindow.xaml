@@ -1,0 +1,25 @@
+﻿<Window x:Class="Catrige_DB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Учёт катриджей" Height="668" Width="768">
+    <Grid>
+        <ToolBar Height="Auto" VerticalAlignment="Top" Margin="0,0,-0.4,0">
+            <Button x:Name="BtSettings" Click="BtSettings_Click">
+                <Image Source="Resources/Settings.ico" Height="21" Width="38" />
+            </Button>
+            <Separator />
+            <Button Content="Принять картридж на заправку" Click="BtAdd_Click" Margin="0,0,0,3" VerticalAlignment="Bottom" />
+            <Separator />
+            <Button Content="Проверить катридж" Click="BtCheck_Click" />
+            <Separator />
+            <Button Content="Добавить катридж" Click="BtAddNew_Click" />
+            <Separator />
+            <Button Content="Удалить / Списать картридж" Click="BtDelete_Click" />
+        </ToolBar>
+        <Frame x:Name="MaiPageFrame" HorizontalAlignment="Left" Height="595" Margin="10,32,0,0" VerticalAlignment="Top"
+               Width="742" />
+    </Grid>
+</Window>

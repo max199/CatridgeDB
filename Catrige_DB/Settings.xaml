@@ -1,0 +1,33 @@
+﻿<Window x:Class="Catrige_DB.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Settings" Height="250" Width="323.334">
+    <Grid>
+        <Label x:Name="LbServerIp" Content="IP адрес сервера:" HorizontalAlignment="Left" Margin="10,13,0,0"
+               VerticalAlignment="Top" />
+        <Label x:Name="LbServerPort" Content="Порт сервера:" HorizontalAlignment="Left" Margin="10,39,0,0"
+               VerticalAlignment="Top" />
+        <Label x:Name="LbServerUserId" Content="Пользователь:" HorizontalAlignment="Left" Margin="10,65,0,0"
+               VerticalAlignment="Top" />
+        <Label x:Name="LbServerPassword" Content="Пароль:" HorizontalAlignment="Left" Margin="10,91,0,0"
+               VerticalAlignment="Top" />
+        <Label x:Name="LbServerDataBase" Content="Название базы данных:" HorizontalAlignment="Left" Margin="10,121,0,0"
+               VerticalAlignment="Top" />
+        <TextBox x:Name="TbServerIp" HorizontalAlignment="Left" Height="23" Margin="184,13,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="121" />
+        <TextBox x:Name="TbServerPort" HorizontalAlignment="Left" Height="23" Margin="184,39,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="TbServerUserId" HorizontalAlignment="Left" Height="23" Margin="184,65,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="TbServerDatabase" HorizontalAlignment="Left" Height="23" Margin="184,121,0,0"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="BtSaveSettings" Content="Сохранить" HorizontalAlignment="Left" Margin="230,189,0,0"
+                VerticalAlignment="Top" Width="75" Click="BtSaveSettings_Click" />
+        <PasswordBox x:Name="TbServerPassword" HorizontalAlignment="Left" Margin="184,93,0,0" VerticalAlignment="Top"
+                     Width="120" Height="23" />
+
+    </Grid>
+</Window>
